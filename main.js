@@ -63,6 +63,8 @@ function DiscountAlg()
 
 }
 
+alert("Discounts will automatically be applied in your cart! Thank you for your support!");
+
 //rolls a simulated 20 sided die and returns the number
 function RandomD20()
 {
