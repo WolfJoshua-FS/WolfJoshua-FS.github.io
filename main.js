@@ -37,6 +37,7 @@ function DiscountAlg()
             break;
         case (x === 20):
             let roll2 = RandomD20();
+            console.log(roll2);
             if(roll2 === 20)
             {
                 alert("Congratulations! You got a critical hit, you win a free shirt!");
