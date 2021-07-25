@@ -1,8 +1,19 @@
 //Let user know that we would like to reward them for learning about us
 alert("Thank you for reading about us! We would like to give you a discount");
 
+//declare arrays globally
+let discountArray = ["10%", "25%", "50%", "80%"];
+let expositionArray = ["1-5", "6-10","11-15", "16-20"]
+
+console.log("Discounts are as follows:")
+for(let i =0; i < discountArray.length; i++)
+{
+    console.log(`For rolls ${expositionArray[i]}, you get a ${discountArray[i]} discount.`)
+}
+
+console.log("If you roll a 20, you will get a second roll. If that second roll is also 20, then you get a free shirt of your choosing!");
 //confirm the user would like to participate
-if(confirm("Would you like to roll for a discount?"))
+if(confirm("Would you like to roll for a discount? You can view the page console for an explanation after your roll."))
 {
     //run dice roll function
     DiscountAlg();
@@ -12,7 +23,7 @@ if(confirm("Would you like to roll for a discount?"))
 function DiscountAlg()
 {
     //array for percentage discount won
-    let discountArray = ["10%", "25%", "50%", "80%"];
+    discountArray = ["10%", "25%", "50%", "80%"];
 
     //variable runs function to return int for the roll
     let roll = RandomD20();
