@@ -16,24 +16,26 @@ function DiscountAlg()
 
     //variable runs function to return int for the roll
     let roll = RandomD20();
+    console.log(roll);
 
     //cases used for each tier of discount based on user roll
     //last case is for when the user rolls 20, it rolls to confirm. If 20 is rolled again, they get a free shirt
-    switch(roll)
+    let x = roll;
+    switch(true)
     {
-        case roll<=5:
-            DiscountMessage(discountArray[0], roll)
+        case (x<=5):
+            DiscountMessage(discountArray[0], roll);
             break;
-        case roll >=6 && roll <11:
-            DiscountMessage(discountArray[1], roll)
+        case (x >=6 && roll <11):
+            DiscountMessage(discountArray[1], roll);
             break;
-        case roll >=11 && roll <16:
-            DiscountMessage(discountArray[2], roll)
+        case (x >=11 && roll <16):
+            DiscountMessage(discountArray[2], roll);
             break;
-        case roll >=16 && roll <20:
-            DiscountMessage(discountArray[3], roll)
+        case (x >=16 && roll <20):
+            DiscountMessage(discountArray[3], roll);
             break;
-        case roll === 20:
+        case (x === 20):
             let roll2 = RandomD20();
             if(roll2 === 20)
             {
@@ -41,7 +43,7 @@ function DiscountAlg()
             }
             else
             {
-                DiscountMessage(discountArray[0], roll);
+                DiscountMessage(discountArray[3], roll);
             }
             break;
     }
@@ -58,5 +60,5 @@ function RandomD20()
 //outputs the winnings to the user
 function DiscountMessage(discount, roll)
 {
-    return alert(`Congratulations! You rolled a ${roll}x for a ${discount} discount on a valid item!`);
+    alert(`Congratulations! You rolled a ${roll} for a ${discount} discount on a valid item!`);
 }
