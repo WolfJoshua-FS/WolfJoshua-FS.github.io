@@ -30,3 +30,30 @@ body{
 em{
     color: maroon;
 }
+
+.discount{
+    background: dimgrey;
+    border: maroon solid 5px;
+    padding: 5px;
+    color: white;
+    margin: auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.buttonDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.winnings{
+    visibility: hidden;
+}
+
+.testing{
+    display: none;
+}
+
+#claimDiscount{
+    display: none;
+}
